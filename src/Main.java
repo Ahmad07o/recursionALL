@@ -13,8 +13,11 @@ public class Main {
         System.out.println(handShake(5));
         int x = 48;
         int y = 18;
-        System.out.println("GCD of " + x + " and " + y + " is: " + GCD(x, y));*/
-        System.out.println(power(2,5));
+        System.out.println("GCD of " + x + " and " + y + " is: " + GCD(x, y));
+        System.out.println(power(2,5));*/
+        String str = "Hello";
+        int len = str.length();
+        System.out.println("Reversed string: " + reverse(str, len));
     }
 
     public static int factorial(int num) {
@@ -73,7 +76,16 @@ public class Main {
             return base *power(base,exponent-1);
         }
     }
+
+    public static String reverse(String s, int len) {
+        if (len <= 1) {
+            return s; // Base case: a string of length 0 or 1 is its own reverse
+        } else {
+            return s.charAt(len - 1) + reverse(s.substring(0, len - 1), len - 1);
+        }
+    }
 }
+
 
 
 
