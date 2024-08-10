@@ -9,8 +9,11 @@ public class Main {
             System.out.println(s + " is not a palindrome");
 
 
-        System.out.println(countDigit(220, 2));*/
-        System.out.println(handShake(5));
+        System.out.println(countDigit(220, 2));
+        System.out.println(handShake(5));*/
+        int x = 48;
+        int y = 18;
+        System.out.println("GCD of " + x + " and " + y + " is: " + GCD(x, y));
     }
 
     public static int factorial(int num) {
@@ -53,7 +56,13 @@ public class Main {
         else
             return n-1+handShake(n-1);
     }
-
+    public static int GCD(int x, int y) {
+        if (y == 0) {
+            return x;
+        } else {
+            return GCD(y, x % y);
+        }
+    }
 }
 
 
