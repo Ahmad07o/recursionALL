@@ -10,10 +10,11 @@ public class Main {
 
 
         System.out.println(countDigit(220, 2));
-        System.out.println(handShake(5));*/
+        System.out.println(handShake(5));
         int x = 48;
         int y = 18;
-        System.out.println("GCD of " + x + " and " + y + " is: " + GCD(x, y));
+        System.out.println("GCD of " + x + " and " + y + " is: " + GCD(x, y));*/
+        System.out.println(power(2,5));
     }
 
     public static int factorial(int num) {
@@ -61,6 +62,15 @@ public class Main {
             return x;
         } else {
             return GCD(y, x % y);
+        }
+    }
+    public static int power(int base,int exponent)
+    {
+        if(exponent==0){
+            return 1;
+        }
+        else{
+            return base *power(base,exponent-1);
         }
     }
 }
